@@ -19,4 +19,6 @@ jobs:
       - name: Print stuff
         run: |
           echo $VAR_1
+          echo ${{ vars.VAR_1 }}
           echo ${{github.event.input.environment}}
+          echo ${{inputs.environment}}
