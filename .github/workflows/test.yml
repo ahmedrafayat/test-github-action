@@ -17,4 +17,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Print stuff
-        run: echo $VAR_1
+        run: |
+          echo $VAR_1
+          echo ${{github.event.input.environment}}
