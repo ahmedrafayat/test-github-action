@@ -1,4 +1,5 @@
 name: Test github action
+run-name: Enviroment ${{inputs.environment}} by @${{github.actor}}
 
 on:
   workflow_dispatch:
@@ -18,7 +19,6 @@ jobs:
 
       - name: Print stuff
         run: |
-          echo $VAR_1
-          echo ${{ vars.VAR_1 }}
-          echo ${{github.event.input.environment}}
+          echo VAR_1 = $VAR_1
+          echo vars.VAR_1=${{ vars.VAR_1 }}
           echo ${{inputs.environment}}
